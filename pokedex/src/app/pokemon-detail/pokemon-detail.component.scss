@@ -1,0 +1,64 @@
+nav {
+  margin: 27px auto 0;
+  position: center;
+  width: 70px;
+  height: 30px;
+  background-color: #34495e;
+  border-radius: 8px;
+  font-size: 0;
+}
+nav a {
+  line-height: 30px;
+  height: 100%;
+  font-size: 13px;
+  display: inline-block;
+  position: center;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  padding-left: 18px;
+}
+nav .animation {
+  position: center;
+  transition: all .5s ease 0s;
+  border-radius: 8px;
+}
+.grid1 {
+  margin-left: 20px;
+  position: relative;
+  float: left;
+  width: 25em;
+  text-align: center;
+}
+.grid2 {
+  margin-left: 20px;
+  position: center;
+  float: right;
+  text-align:center;
+  width: 25em;
+}
+.detail {
+  margin-left: 20px;
+  width: 60em;
+}
+.desc {
+  margin-left: 20px;
+  width: 50em;
+  position: relative;
+  float: left;
+}
+.grid1 img {
+  width:50%;
+  height: 50%;
+}
+.grid2 img {
+  width:20px;
+  height: 15px;
+  margin-left: 10px;
+}
+.type {
+  background-color: #eee;
+  border-radius: 8px;
+  font-size: 0;
+}
+

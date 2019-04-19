@@ -1,0 +1,26 @@
+<div class="detail">
+  <div class="grid1">
+    <p>
+    <img src="assets/assets/img/official-artwork/{{pokemon.id}}.png" alt=""><br><br>
+    No. {{pokemon.id}}<br><br>
+    </p>
+  </div>
+  <br><br>
+  <div class="grid2">
+    <p>
+    {{pokemon.name | uppercase}} <a (click)="audioFunction()"><img src="assets/assets/playButton/play.jpeg"></a> <br><br><br>
+      <span *ngFor="let type of pokemon.types">
+       | {{type}} |
+      </span><br><br><br>
+    Height : {{pokemon.height}}<br><br><br>
+    Weight : {{pokemon.weight}}<br><br><br>
+    </p>
+  </div>
+  <div class="desc">
+  {{pokemon.description}}<br><br>
+  <nav>
+    <a (click)="goBack()">Back</a>
+  </nav>
+</div>
+</div>
+
