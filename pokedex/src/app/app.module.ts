@@ -14,6 +14,7 @@ import {PokemonsListComponent} from './pokemons/pokemons-list/pokemons-list.comp
 import {PokemonDetailComponent} from './pokemon-detail/pokemon-detail.component';
 import {MatListModule, MatMenuModule, MatSidenavModule} from '@angular/material';
 import {PokedexComponent} from './pokemons/pokedex/pokedex.component';
+import {AuthentificationModule} from './authentification/authentification.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {PokedexComponent} from './pokemons/pokedex/pokedex.component';
     FormsModule,
     MatMenuModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    AuthentificationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
