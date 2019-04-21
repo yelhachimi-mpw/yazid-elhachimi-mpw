@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {PokemonService} from '../pokemons/pokemon.service';
 import {Pokemon} from '../pokemons/pokemon';
 import {PageData} from '../models/PageData';
@@ -11,11 +11,16 @@ import {PageData} from '../models/PageData';
 export class DashboardComponent implements OnInit {
 
   pokemons: PageData<Pokemon>;
+  @Output() pokemonList = new EventEmitter<number>();
+
   constructor(private pokemonService: PokemonService) { }
   ngOnInit() {
     this.getPokemons();
   }
   getPokemons(){
     this.pokemonService.getPokemons().subscribe(pokemons => this.pokemons = pokemons);
+  }
+  envoyer(id: number): void {
+    this.pokemonList.emit(id);
   }
 }

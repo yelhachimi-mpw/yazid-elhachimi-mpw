@@ -12,14 +12,16 @@ import { HttpClientModule }    from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {PokemonsListComponent} from './pokemons/pokemons-list/pokemons-list.component';
 import {PokemonDetailComponent} from './pokemon-detail/pokemon-detail.component';
-import {MatMenuModule} from '@angular/material';
+import {MatListModule, MatMenuModule, MatSidenavModule} from '@angular/material';
+import {PokedexComponent} from './pokemons/pokedex/pokedex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    //PokemonsListComponent,
-    //DashboardComponent,
-    //PokemonDetailComponent,
+    // PokedexComponent,
+    // PokemonsListComponent,
+    // DashboardComponent,
+    // PokemonDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,9 @@ import {MatMenuModule} from '@angular/material';
     PokemonsModule,
     HttpClientModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

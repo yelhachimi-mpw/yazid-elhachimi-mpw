@@ -1,0 +1,16 @@
+<mat-sidenav-container class="side-container">
+  <mat-sidenav mode="side" opened>
+    <br>
+    <app-pokemons-list (pokemonList)="recuperer($event)"></app-pokemons-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <h1 style="text-align: center">
+      Welcome to Pokedex
+    </h1>
+    <nav class="back">
+      <a mat-menu-item routerLink="/dashboard">Dashboard</a>
+      <a mat-menu-item routerLink="/pokedex">Pokedex</a>
+    </nav>
+    <app-pokemon-detail *ngIf="pokemonId" [pokemonId]="pokemonId"></app-pokemon-detail>
+  </mat-sidenav-content>
+</mat-sidenav-container>

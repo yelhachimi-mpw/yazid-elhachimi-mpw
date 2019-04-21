@@ -21,4 +21,8 @@ export class PokemonService {
     const url = 'http://51.75.122.159:3000/pokemons/' + id;
     return this.http.get<Pokemon>(url);
   }
+  getPokemonsBySearch(idname: string): Observable<PageData<Pokemon>> {
+    const params = new HttpParams().set('search', idname);
+    return this.http.get<PageData<Pokemon>>(this.pokemonUrl, {params});
+  }
 }
